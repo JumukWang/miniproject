@@ -1,7 +1,7 @@
 
 # 👍Project_LookingGood(Back-end)👍 
 
-## 부제: 좋은 것 같은데요?
+## 프로젝트 이름 : 
 
 
 

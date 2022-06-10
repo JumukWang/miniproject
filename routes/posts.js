@@ -28,15 +28,8 @@ router.post('/single', upload.single('imageUrl'), async (req, res) => {
 // 게시글 작성 //
 
 router.post("/post", authmiddlewares, upload.single('imageUrl'), async (req, res) => {
-  const today = new Date();
-  const year = today.getFullYear();
-  let month = today.getMonth() + 1;
-  let day = today.getDate();
-  let hour = today.getHours();
-  let minutes = today.getMinutes();
-  let seconds = today.getSeconds();
+ 
 
-  
   var now = dayjs();
   var createAt = now.format();
 
@@ -47,7 +40,7 @@ router.post("/post", authmiddlewares, upload.single('imageUrl'), async (req, res
   const userImageUrl = user[0].userImageUrl;
   const imageUrl = req.file.location
   const { category, title, content } = req.body;
-  console.log(userId)
+
 
   await Post.create({
     // postId: postId,

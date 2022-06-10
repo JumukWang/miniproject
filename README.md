@@ -1,5 +1,5 @@
 
-# 👍Project_LookingGood(Back-end)👍 
+# 👍(Back-end)👍 
 
 ## 프로젝트 이름 : 
 
@@ -39,7 +39,7 @@
 <br/>
 <br/>
 
-## 🎨 프로젝트 와이어프레임
+## 🎨 프로젝트 구성
 
 <br/>
 <br/>

@@ -5,6 +5,9 @@ const Post = require('../schemas/post')
 const authMiddleware = require("../middlewares/auth-middleware");
 const cors = require('cors')
 
+
+
+
 // 댓글 저장
 
 router.post("/comments/save/:postId", authMiddleware, async (req, res) => {
@@ -14,26 +17,18 @@ router.post("/comments/save/:postId", authMiddleware, async (req, res) => {
 
     const today = new Date();
     const year = today.getFullYear();
-    let month = today.getMonth() + 1;
-    let day = today.getDate();
-    let hour = today.getHours();
-    let minutes = today.getMinutes();
-    let seconds = today.getSeconds();
-
-    month = month < 10 ? "0" + month : month;
-    day = day < 10 ? "0" + day : day;
-    hour = hour < 10 ? "0" + hour : hour;
-    seconds = seconds < 10 ? "0" + seconds : seconds;
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-
-    const createAt =
-      year + "-" + month + "-" + day + " " + hour + ":" + minutes + ":" + seconds;
+    var now = dayjs();
+    var createAt = now.format();
+  
+    const createAt = createAt.slice(0, 16).split('T').join(' ');
+   
+      
 
     const userId = user[0].userId;
     const userImageUrl = user[0].userImageUrl;
     const { comment } = req.body;
     const { postId } = req.params
-    console.log(userId, comment, createAt, postId);
+    // console.log(userId, comment, createAt, postId);
     const list = await Comment.create({
       // userId:user.userId,
       userId,

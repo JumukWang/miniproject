@@ -1,11 +1,7 @@
 const mongoose = require("mongoose");
 
 const postSchema = new mongoose.Schema({
-  // postId: {
-  //   type: String,
-  //   unique: true, //유니크 값
-  //   required: true, //필수 값
-  // },
+
   userId: {
     //사용자 이름
     type: String,
@@ -31,9 +27,7 @@ const postSchema = new mongoose.Schema({
     //이미지
     type: String,
   },
-  // author:{
-  //   type:String,
-  // }
+
   date: {
     type: String,
   },

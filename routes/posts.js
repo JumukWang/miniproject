@@ -36,14 +36,11 @@ router.post("/post", authmiddlewares, upload.single('imageUrl'), async (req, res
   let minutes = today.getMinutes();
   let seconds = today.getSeconds();
 
-  month = month < 10 ? "0" + month : month;
-  day = day < 10 ? "0" + day : day;
-  hour = hour < 10 ? "0" + hour : hour;
-  seconds = seconds < 10 ? "0" + seconds : seconds;
-  minutes = minutes < 10 ? "0" + minutes : minutes;
+  
+  var now = dayjs();
+  var createAt = now.format();
 
-  const createAt =
-    year + "-" + month + "-" + day + " " + hour + ":" + minutes + ":" + seconds;
+  createAt = createAt.slice(0, 16).split('T').join(' ');
 
   const { user } = res.locals;
   const userId = user[0].userId;

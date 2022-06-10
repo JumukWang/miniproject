@@ -6,6 +6,7 @@ const connect = require("./schemas");
 const cors = require("cors");
 const app = express();
 const port = 3000;
+const router = express.Router();
 
 connect();
 
@@ -17,6 +18,11 @@ app.use(cors());
 app.use(express.static("static"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+
+router.get('/', (req, res) => {
+  res.send('백엔드 기본 페이지 입니다..');
+});
 
 app.use("/api", [postsRouter, usersRouter, commentsRouter]);
 

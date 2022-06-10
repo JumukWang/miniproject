@@ -32,9 +32,8 @@ router.post("/post", authmiddlewares, upload.single('imageUrl'), async (req, res
 
   var now = dayjs();
   var createAt = now.format();
-
-  const createAt = createAt.slice(0, 16).split('T').join(' ');
-
+  createAt = createAt.slice(0, 16).split('T').join(' ');
+  
   const { user } = res.locals;
   const userId = user[0].userId;
   const userImageUrl = user[0].userImageUrl;

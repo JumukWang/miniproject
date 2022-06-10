@@ -20,11 +20,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 
-router.get('/', (req, res) => {
-  res.send('백엔드 기본 페이지 입니다..');
-});
+
 
 app.use("/api", [postsRouter, usersRouter, commentsRouter]);
+
+app.get('/', (req, res) => {
+  res.send('백엔드 기본 페이지 입니다..');
+});
 
 app.listen(port, () => {
   console.log(port, "포트가 켜졌습니다.");

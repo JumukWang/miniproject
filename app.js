@@ -6,9 +6,8 @@ const connect = require("./schemas");
 const cors = require("cors");
 const morgan = require("morgan");
 const app = express();
-let port = process.env.DB_PORT || 80 ;
-require("dotenv").config();
-
+const port = 3000;
+const router = express.Router();
 
 connect();
 
@@ -22,6 +21,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use("/api", usersRouter, commentsRouter);
+
+app.get('/', (req, res) => {
+  res.send('백엔드 기본 페이지 입니다..');
+});
 
 app.listen(port, () => {
   console.log(port, "포트가 켜졌습니다.");

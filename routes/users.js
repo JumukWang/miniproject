@@ -60,6 +60,26 @@ router.post("/login", async (req, res) => {
   res.send({ token });
 });
 
+//  카카오 로그인
+// router.post('/kakaoLogin', isNotLoggedIn), (req, res, next) => {
+//   passport.authenticate('local', (authError, user, info) => {
+//     if(authError) {
+//       console.error(authError);
+//       return next(authError);
+//     }
+//     if(!user) {
+//       return res.redirect(`/?loginError = ${info.message}`);
+//     }
+//     return req.login(user, (loginError) => {
+//       if(loginError) {
+//         console.error(loginError);
+//         return next(loginError);
+//       }
+//       return res.redirect('/');
+//     });
+//   })(req, res, next);// 미들웨어 내의 미들웨어에는 
+// } 
+
 // 정보 조회
 router.get("/checkLogin", authMiddleware, async (req, res) => {
   const { user } = res.locals;

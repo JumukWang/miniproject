@@ -11,13 +11,15 @@
     "mongoose": "^6.2.10",
     "morgan": "^1.10.0",
     "multer": "^1.4.4",
-    "multer-s3": "^2.10.0"
+    "multer-s3": "^2.10.0",
+    "passport": "^0.6.0",
+    "passport-kakao": "^1.0.1",
+    "passport-naver": "^1.0.6"
   },
   "name": "miniproject",
   "description": "## 프로젝트 이름 :",
   "version": "1.0.0",
   "main": "app.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

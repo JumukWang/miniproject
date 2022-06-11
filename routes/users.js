@@ -16,9 +16,11 @@ const postUsersSchema = Joi.object({
 
 //회원가입
 router.post("/signup", async (req, res) => {
-  try {
-    const { userId, password, confirmPassword, userImageUrl } =
-      await postUsersSchema.validateAsync(req.body);
+  try {  
+    const { userId, password, confirmPassword, userImageUrl }
+    = await postUsersSchema.validateAsync(req.body);
+    console.log({ userId, password, confirmPassword, userImageUrl });
+    
 
     if (password !== confirmPassword) {
       return res.status(400).send({
@@ -35,7 +37,9 @@ router.post("/signup", async (req, res) => {
 
     const user = new User({ userId, password, userImageUrl });
     await user.save();
-    res.status(201).send({});
+    res.status(201).send({messege: "회원가입 완성"});
+
+    
   } catch (error) {
     return res.status(400).send({
       errorMessage: "요청한 데이터 형식이 올바르지 않습니다.",
@@ -47,7 +51,6 @@ router.post("/signup", async (req, res) => {
 router.post("/login", async (req, res) => {
   const { userId, password } = req.body;
   const user = await User.findOne({ userId, password });
-
   if (!user) {
     return res.status(400).send({
       errorMessage: "아이디 또는 비밀번호를 확인해주세요.",

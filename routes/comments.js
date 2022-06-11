@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const Comment = require("../schemas/comment");
-const Post = require('../schemas/post')
 const authMiddleware = require("../middlewares/auth-middleware");
 const cors = require('cors')
 

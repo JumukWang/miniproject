@@ -11,20 +11,21 @@ const commentsSchema = new Schema({
   },
   commentId: {
     type: String,
-    // required: true,
+    
   },
   postId: {
     type: String,
   },
   comment: {
     type: String,
-    // required:true
+    
   },
   userImageUrl: {
     type: String,
   },
   createAt: {
-    type: String,
+    type: Date,
+    default: Date.now
   }
 });
 

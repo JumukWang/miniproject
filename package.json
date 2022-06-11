@@ -9,7 +9,26 @@
     "joi": "^17.6.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.2.10",
+    "morgan": "^1.10.0",
     "multer": "^1.4.4",
     "multer-s3": "^2.10.0"
-  }
+  },
+  "name": "miniproject",
+  "description": "## 프로젝트 이름 :",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JumukWang/miniproject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JumukWang/miniproject/issues"
+  },
+  "homepage": "https://github.com/JumukWang/miniproject#readme"
 }

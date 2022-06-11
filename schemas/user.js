@@ -12,7 +12,7 @@ const userSchema = new mongoose.Schema({
   },
   userImageUrl: {
     type: String,
-    required: true,
+    
   },
 });
 

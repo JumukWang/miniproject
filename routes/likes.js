@@ -35,3 +35,6 @@ router.post("/like/uplike", (req, res) => {
       }
     );
   });
+
+
+  module.exports = router;

@@ -65,10 +65,51 @@ router.get('/get/:postId', async (req, res) => {
 //댓글 삭제
 
 router.delete('/delete/:commentId', authMiddleware, async (req, res) => {
-  const { commentId } = req.params;
-  await Comment.deleteOne({ _id: commentId });
-  console.log(commentId);
-  res.send({ result: '삭제완료' });
+
+  try {
+
+
+    const { commentId } = req.params;
+    await Comment.deleteOne({ _id: commentId });
+    console.log(commentId);
+    res.send({ result: '삭제완료' });
+
+
+  } catch (err) {
+    console.error(err);
+  }
+
 });
+
+
+
+
+
+// 댓글 수정
+
+router.put('/edit/:commentId', authMiddleware, async (req, res) => {
+
+
+  try {
+
+
+    const { commentId } = req.params;
+    const { comment } = req.body;
+  
+    // console.log(existsLists.length); // 셀수가 없다.
+  
+    await Comment.updateOne({ commentId }, { $set: { comment } });
+  
+    res.json({ result: '수정완료' });
+
+
+  } catch (err) {
+    console.error(err);
+  }
+
+
+});
+
+
 
 module.exports = router;

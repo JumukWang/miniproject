@@ -8,19 +8,23 @@ const morgan = require("morgan");
 const app = express();
 const port = 3000;
 const router = express.Router();
-
-connect();
-
-
 const usersRouter = require("./routes/users");
 const commentsRouter = require("./routes/comments");
+const controller = require("./controller/index")
+
+
+
+
+
+
+
 app.use(morgan('tiny'));
 app.use(cors());
 app.use(express.static("static"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use("/api", [usersRouter, commentsRouter]);
 
-app.use("/api", usersRouter, commentsRouter);
 
 app.get('/', (req, res) => {
   res.send('백엔드 기본 페이지 입니다..');

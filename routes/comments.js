@@ -1,9 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const Comment = require('../schemas/comment');
-const Post = require('../schemas/post');
 const authMiddleware = require('../middlewares/auth-middleware');
-
+const dayjs = require('dayjs');
 // 댓글 작성
 
 router.post('/post', authMiddleware, async (req, res) => {
@@ -13,21 +12,17 @@ router.post('/post', authMiddleware, async (req, res) => {
     var now = dayjs();
     var createAt = now.format();
     createAt = createAt.slice(0, 16).split('T').join(' ');
-
+    console.log(createAt);
     const userId = user[0].userId;
-    // const userImageUrl = user[0].userImageUrl;
     const { comment } = req.body;
     const { postId } = req.params;
-    // console.log(userId, comment, createAt, postId);
     const list = await Comment.create({
       // userId:user.userId,
       userId,
       comment,
       createAt,
       postId,
-      // commentId,
     });
-    // console.log(list);
     res.json({
       success: '댓글이 저장 되었습니다.',
       list,
@@ -37,6 +32,20 @@ router.post('/post', authMiddleware, async (req, res) => {
     res.json({
       errorMassage: '댓글 저장 실패',
     });
+  }
+});
+
+
+
+//댓글 전체 조회
+
+router.get('/get/comment', async (req, res) => {
+  try {
+    
+    let comments = await Comment.find();
+    res.json(comments);
+  } catch (err) {
+    console.error(err);
   }
 });
 

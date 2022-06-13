@@ -1,0 +1,80 @@
+{
+  "list": [
+    {
+      "id": 0,
+      "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1FHRSewzkNcCF6BgjDw9eIT20SVS0o8OzzgWyjmNOq2T7elL0WFBwB7x-A6SN_me89WQ&usqp=CAU",
+      "ID": "test1@naver.com",
+      "password": "ert45yui78",
+      "passwordCheck": "ert45yui78"
+    },
+    {
+      "id": 1,
+      "profile": "http://www.street.co.kr/wp-content/uploads/2020/02/01-1-1.jpg",
+      "ID": "test2@naver.com",
+      "password": "1ert45yui78",
+      "passwordCheck": "1ert45yui78"
+    },
+    {
+      "profile": "profile_ref.current.value",
+      "ID": "gk321@naver.com",
+      "password": "ert45yui78",
+      "passwordCheck": "ert45yui78",
+      "id": 2
+    },
+    {
+      "ID": "test2@aa.com",
+      "password": "ert45yui78",
+      "passwordCheck": "ert45yui78",
+      "id": 3
+    },
+    {
+      "profile": "C:\\fakepath\\batch_23.jpg",
+      "ID": "test11@aa.com",
+      "password": "ert45yui78",
+      "passwordCheck": "ert45yui78",
+      "id": 4
+    },
+    {
+      "profile": "C:\\fakepath\\batch_23.jpg",
+      "ID": "bb@bb.com",
+      "password": "ert45yui78",
+      "passwordCheck": "ert45yui78",
+      "id": 5
+    },
+    {
+      "profile": "",
+      "ID": "gk321@naver.com",
+      "password": "ert45yui78",
+      "passwordCheck": "ert45yui78",
+      "id": 6
+    },
+    {
+      "profile": "",
+      "ID": "ck321@aa.com",
+      "password": "ert45yui78",
+      "passwordCheck": "ert45yui78",
+      "id": 7
+    },
+    {
+      "profile": "C:\\fakepath\\batch_23.jpg",
+      "ID": "dd@aa.com",
+      "password": "ert45yui78",
+      "passwordCheck": "ert45yui78",
+      "id": 8
+    },
+    {
+      "profile": "C:\\fakepath\\batch_23.jpg",
+      "ID": "dd3212@aa.com",
+      "password": "qwe123",
+      "passwordCheck": "qwe123",
+      "id": 9
+    },
+    {
+      "profile": "C:\\fakepath\\리덕스 객체2.PNG",
+      "ID": "ss@naver.com",
+      "password": "ert45yui78",
+      "passwordCheck": "ert45yui78",
+      "id": 10
+    }
+  ]
+}

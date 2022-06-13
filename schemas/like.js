@@ -2,12 +2,12 @@ const mongoose = require("mongoose");
 
 
 const likeSchema = mongoose.Schema({
-    userId: {
+    userid: {
       type: String,
       require :true,
     },
 
-    PostId: {
+    postid: {
       type: String,
       require :true 
     },

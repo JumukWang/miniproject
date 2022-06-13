@@ -8,13 +8,13 @@ dotenv.config();
 
 // * 상세 페이지 접속
 
-router.get('/detail/:foodId', async function (req, res) {
-    const { foodId } = req.params;
-    const mains = await Main.findOne({foodId});
+router.get('/detail/:postid', async function (req, res) {
+    const { postid } = req.params;
+    const mains = await Main.findOne({postid});
     res.json ({
         detail: 
         {
-                foodID: mains.foodID,
+                postid: mains.postid,
                 stdRestCd : mains.stdRestCd, //휴게소코드
                 stdRestNm : mains.stdRestNm,//휴게소/주유소명
                 svarAddr : mains.svarAddr,//휴게소주소

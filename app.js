@@ -2,7 +2,6 @@ const express = require("express");
 const multer = require("multer");
 const aws = require("aws-sdk");
 const multerS3 = require("multer-s3");
-const connect = require("./schemas");
 const cors = require("cors");
 const morgan = require("morgan");
 const app = express();
@@ -10,10 +9,18 @@ const port = 3000;
 const router = express.Router();
 const usersRouter = require("./routes/users");
 const commentsRouter = require("./routes/comments");
-const likesRouter = require("./routes/likes")
+const likesRouter = require("./routes/likes");
+const mongoose = require('mongoose');
+const config = require('./config/key');
 
 
+mongoose.connect(config.mongoURI,{
 
+  useNewUrlParser:true, useUnifiedTopology:true
+
+
+}).then(()=> console.log('Connected'))  
+    .catch(err => console.log(err))
 
 
 

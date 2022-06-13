@@ -3,16 +3,16 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const commentsSchema = new Schema({
-  userId: {
+  userid: {
     type: String,
     unique: true,
   },
-  postId: {
+  postid: {
     type: String,
     unique: true,
   },
 
-  commentId: {
+  commentid: {
 
     type: String,
     unique: true,

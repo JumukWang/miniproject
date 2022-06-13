@@ -1,36 +1,52 @@
 {
+  "name": "mini",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "aws-sdk": "^2.1112.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "aws-sdk": "^2.1152.0",
     "axios": "^0.27.2",
-    "bcrypt": "^5.0.1",
-    "body-parser": "^1.20.0",
     "cors": "^2.8.5",
     "dayjs": "^1.11.3",
-    "dotenv": "^16.0.0",
-    "express": "^4.17.3",
     "joi": "^17.6.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.2.10",
+    "mongoose": "^6.3.6",
     "morgan": "^1.10.0",
-    "multer": "^1.4.4",
-    "multer-s3": "^2.10.0",
-    "yarn": "^1.22.19"
+    "multer": "^1.4.5-lts.1",
+    "multer-s3": "^3.0.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-redux": "^8.0.2",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "redux": "^4.2.0",
+    "styled-components": "^5.3.5",
+    "web-vitals": "^2.1.4"
   },
-  "name": "miniproject",
-  "description": "## 프로젝트 이름 :",
-  "version": "1.0.0",
-  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JumukWang/miniproject.git"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JumukWang/miniproject/issues"
-  },
-  "homepage": "https://github.com/JumukWang/miniproject#readme"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
